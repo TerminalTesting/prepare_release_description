@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms comment='Формы для страницы задачи REDMINE project.terminak.ru '>
+
+	<form name='LOGIN_FORM' type='' comment='Форма регистрации' >
+		<how name='By.ID'>login-form</how>
+		<field name='USER_NAME'	type='' comment='имя пользователя'>
+			<how name='By.ID'>username</how>
+		</field>
+		<field name='USER_PASSWORD'	type='' comment='пароль пользователя'>
+			<how name='By.ID'>password</how>
+		</field>
+		<field name='LOGIN_BUTTON'	type='' comment='кнопка войти'>
+			<how name='By.NAME'>login</how>
+		</field>
+	</form>
+
+<!--
+	<form name='DESCRIPTION' type='' comment='Список задачи' >
+		<how name='By.CLASS_NAME'>description</how>
+		<field name='WIKI' comment="Описание ">
+			<how name='By.CLASS_NAME'>wiki</how>
+			<field name='TASK_NUM'	type='set' comment='Список задач'>
+				<how name='By.TAG_NAME'>a</how>
+			</field>
+		</field>
+	</form>
+-->
+
+ 	<form name='DESCRIPTION' type='' comment='Список задачи' >
+		<how name='By.ID'>relations</how>
+		<field name='SUBJ' type='set' comment='Заголовок задачи'>
+			<how name='By.CLASS_NAME'>subject</how>
+			<field name='TASK_NUM'	comment='Список задач'>
+				<how name='By.TAG_NAME'>a</how>
+			</field>			
+		</field>
+	</form> 
+	
+	<form name='TASK_DESCRIPTION_1' type='' comment='Страница описания задачи' >
+		<how name='By.ID'>main</how>
+ 		<field name='NUM' type='' comment="Номер задачи">
+			<how name='By.TAG_NAME'>h2</how>
+		</field> 
+		<field name='SUBJ' comment='Заголовок задачи'>
+		<how name='By.CLASS_NAME'>subject</how>
+		</field>
+		
+		
+		<field name="OWNER" type='' index='7' comment="Заказчик">
+			<how name="By.TAG_NAME">tr</how>
+		</field>
+
+		<field name='WIKI' type='' comment="Описание ">
+			<how name='By.CLASS_NAME'>wiki</how>
+		</field>
+	</form>
+
+
+</forms>
+
