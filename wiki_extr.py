@@ -112,7 +112,7 @@ for task_url in issues_urls:
     idx+=1
 
 fp = open(RELEASE_FILE, 'w+')
-fp.write(buf)
+fp.write(buf.decode('utf-8', 'ignore'))
 fp.close()
 
 driver.close()
